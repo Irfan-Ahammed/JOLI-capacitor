@@ -10,14 +10,21 @@ import Applicants from "./components/applicants/Applicants";
 import UpdateJob from "./components/jobs/UpdateJob";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import Explore from "./pages/Explore";
+import Notification from "./pages/Notification";
+import More from "./pages/More";
 
 function App() {
   return (
     <Router>
-      <Header/>
       <Routes>
-     <Route path="/" element={<Home />} />
-          {/*  <Route path="/jobs" element={<Jobs />} />
+        <Route path="/" index element={<Home />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/post-job" element={<Notification />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/more" element={<More />} />
+        {/*  <Route path="/jobs" element={<Jobs />} />
         <Route path="/discription/:id" element={<JobsDescription />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/:id/applicants" element={<Applicants />} />
